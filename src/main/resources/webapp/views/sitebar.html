@@ -1,0 +1,153 @@
+<div id="sitebar">
+    <nav id="sitebar-nav">
+        <div id="sitebar-navigation" class="clearfix">
+            <div id="sitebar-navigation-left">
+                <div ng-if="auth">
+                    <span>您好，风雪久</span>
+                    <span class="sep">|</span>
+                    <a ng-click="logout()">注销</a>
+                </div>
+                <div ng-if="!auth">
+                    <span class="f-hkdn f-hkdnact">我的世界欢迎你！</span>
+                    <a class="login">登录</a>
+                    <span class="sep">|</span>
+                    <a>免费注册</a>
+                </div>
+            </div>
+            <ul id="sitebar-navigation-right">
+                <li>
+                    <a class="toplevel" ng-click="moveTo('/index')">
+                        <i class="iconfont icn">&#xe641;</i>
+                        每日签到
+                    </a>
+                    <span class="sep">|</span>
+                </li>
+                <li>
+                    <a class="toplevel" ng-click="moveTo('/index')">我的订单</a>
+                    <span class="sep">|</span>
+                </li>
+                <li>
+                    <div class="mcDropMenuBox">
+                        <a class="toplevel topHolder" ng-click="moveTo('/index')">个人中心<i class="arr"></i></a>
+                        <span class="sep">|</span>
+                        <div class="mcDropMenu">
+                            <a ng-click="moveTo('/index')">
+                                <span class="cnt">账号管理</span>
+                            </a>
+                            <a ng-click="moveTo('/index')">
+                                <span class="cnt">我关注的品牌</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mcDropMenuBox">
+                        <a class="toplevel topHolder" ng-click="moveTo('/index')">客户服务<i class="arr"></i></a>
+                        <span class="sep">|</span>
+                        <div class="mcDropMenu">
+                            <a ng-click="moveTo('/index')">
+                                <span class="cnt">联系客服</span>
+                            </a>
+                            <a ng-click="moveTo('/index')">
+                                <span class="cnt">帮助中心</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mcDropMenuBox">
+                        <a class="toplevel topHolder" ng-click="moveTo('/index')">充值中心<i class="arr"></i></a>
+                        <span class="sep">|</span>
+                        <div class="mcDropMenu">
+                            <a ng-click="moveTo('/index')">
+                                <span class="cnt">话费流量</span>
+                            </a>
+                            <a ng-click="moveTo('/index')">
+                                <span class="cnt">游戏充值</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mcDropMenuBox">
+                        <a class="toplevel topHolder" ng-click="moveTo('/index')">更多<i class="arr"></i></a>
+                        <div class="mcDropMenu">
+                            <a ng-click="moveTo('/index')">
+                                <span class="cnt">收藏本站</span>
+                            </a>
+                            <a ng-click="moveTo('/about')">
+                                <span class="cnt">关于</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header id="siteber-header">
+        <div id="siteber-header-wrap">
+            <a ng-click="moveTo('/index')" class="logomine" title="我的世界"></a>
+            <div class="searchdiv">
+                <div id="top-search-box">
+                    <div id="top-search">
+                        <div class="wrap">
+                            <input id="top-search-input" placeholder="话费充值" type="text"/>
+                        </div>
+                        <span id="top-search-btn" class="iconfont iconfont-top-search">&#xe7b7;</span>
+                        <span class="iconfont iconfont-top-input">&#xe7b7;</span>
+                    </div>
+                    <div class="searchhint">
+                        <ul id="searchhintlist" style="display:none;">
+                            <li>
+                                <a class="item" title="话费充值50" href="javascript:;">
+                                    <span class="shname">话费充值50</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" title="话费充值100" href="javascript:;">
+                                    <span class="shname">话费充值100</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul id="suggest-list" class="suggestlist clearfix">
+                    <li>
+                        <a class="showcolor suggestitem">美妆年终大赏</a>
+                    </li>
+                    <li>
+                        <span class="sep">|</span>
+                        <a class="showcolor suggestitem">话费充值</a>
+                    </li>
+                    <li>
+                        <span class="sep">|</span>
+                        <a class="suggestitem">面膜</a>
+                    </li>
+                    <li>
+                        <span class="sep">|</span>
+                        <a class="suggestitem">羽绒服</a>
+                    </li>
+                    <li>
+                        <span class="sep">|</span>
+                        <a class="suggestitem">手机</a>
+                    </li>
+                    <li>
+                        <span class="sep">|</span>
+                        <a class="suggestitem">运动鞋</a>
+                    </li>
+                    <li>
+                        <span class="sep">|</span>
+                        <a class="suggestitem">牛奶</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="shopcart">
+                <i class="iconfont">&#xe611;</i>
+                <span class="wrap">
+                    购物车
+                    <b class="num" id="shopcartnum" style="display:none">0</b>
+                </span>
+            </a>
+        </div>
+    </header>
+</div>

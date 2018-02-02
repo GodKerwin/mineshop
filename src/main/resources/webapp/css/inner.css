@@ -1,0 +1,1696 @@
+body {
+    font-size: 16px;
+    color: #000000;
+    font-family: 'Armata', Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+    margin: 0;
+    min-width: 1024px;
+    min-height: 768px;
+}
+
+:-moz-placeholder {
+    color: #999;
+}
+
+*::-moz-placeholder {
+    color: #999;
+}
+
+.nowrap {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.wrap {
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 542854 */
+    src: url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.eot');
+    src: url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+/*--------------------------------------------主页------------------------------------------------*/
+
+/*-------------------导航栏-----------------------*/
+
+#sitebar {
+    text-align: left;
+}
+
+#sitebar-nav {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-bottom: 1px solid #ededee;
+    color: #666;
+    position: relative;
+    z-index: 999;
+    font-size: 12px;
+}
+
+#sitebar-nav a {
+    color: #666;
+    text-decoration: none;
+}
+
+#sitebar-nav a:hover {
+    color: #e31436;
+    text-decoration: none;
+}
+
+#sitebar-nav i.icn {
+    color: #e31436;
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 3px;
+}
+
+#sitebar-navigation {
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    position: relative;
+    width: 1090px;
+}
+
+.clearfix::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#sitebar-navigation-left {
+    float: left;
+}
+
+#sitebar-navigation-left div {
+    margin: 0;
+    padding: 0;
+}
+
+#sitebar-navigation-left .login {
+    margin-left: 16px;
+}
+
+#sitebar-navigation-left .sep {
+    padding: 0 10px;
+    color: #ccc;
+}
+
+#sitebar-navigation-right {
+    position: relative;
+    float: right;
+    right: -3px;
+}
+
+#sitebar-navigation-right li {
+    position: relative;
+    float: left;
+}
+
+#sitebar-navigation-right .sep {
+    color: #ccc;
+}
+
+.mcDropMenuBox {
+    border: 1px solid transparent;
+    left: -3px;
+    position: relative;
+    top: -1px;
+    z-index: 1000;
+}
+
+.toplevel {
+    padding: 0 14px 0 8px;
+}
+
+.topHolder {
+    padding: 0 24px 0 16px !important;
+    position: relative;
+}
+
+.topHolder .arr {
+    border-color: #666 transparent transparent;
+    border-style: solid dashed dashed;
+    border-width: 4px 4px 0;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    margin-top: -2px;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transition: transform 0.2s ease-in 0s;
+    width: 0;
+}
+
+.mcDropMenuBox:hover, .mcDropMenu {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e8e8ea;
+}
+
+.mcDropMenuBox:hover .topHolder .arr {
+    transform: rotate(180deg);
+}
+
+#sitebar-nav .mcDropMenuBox:hover .sep {
+    color: #fff;
+}
+
+.mcDropMenuBox:hover .mcDropMenu {
+    display: block;
+}
+
+.mcDropMenu {
+    border-top: 0 none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+    display: none;
+    left: -1px;
+    padding: 4px 15px 12px 14px;
+    position: absolute;
+    top: 30px;
+}
+
+.mcDropMenu a {
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    overflow-wrap: normal;
+    white-space: nowrap;
+}
+
+.mcDropMenu .cnt {
+    position: relative;
+}
+
+#siteber-header {
+    background: transparent none repeat scroll 0 0;
+    height: 135px;
+    position: relative;
+    z-index: 998;
+}
+
+#siteber-header-wrap {
+    height: 135px;
+    margin: 0 auto;
+    position: relative;
+    width: 1090px;
+}
+
+#siteber-header .logomine {
+    background: url("../img/onlineshop/logomine.png") no-repeat;
+    background-size: 200px 100px;
+    cursor: pointer;
+    height: 135px;
+    left: 0;
+    outline: medium none;
+    position: absolute;
+    top: 20px;
+    width: 330px;
+    z-index: 997;
+}
+
+#siteber-header .searchdiv {
+    top: 43px;
+    left: 343px;
+    position: absolute;
+    z-index: 996;
+}
+
+#top-search {
+    background-color: #333;
+    height: 36px;
+    padding-left: 1px;
+    width: 510px;
+}
+
+#top-search .iconfont-top-search {
+    display: inline-block;
+}
+
+#top-search .iconfont-top-input {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    left: 10px;
+    position: absolute;
+    top: 7px;
+}
+
+#top-search .wrap {
+    background-color: #fff;
+    float: left;
+    margin: 2px 1px;
+    padding: 4px 4px 4px 30px;
+}
+
+#top-search-input {
+    border: 0 none;
+    font-size: 13px;
+    height: 24px;
+    line-height: 24px;
+    width: 423px;
+}
+
+#top-search-btn {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 19px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    width: 50px;
+}
+
+#top-search, #top-search-btn {
+    border-radius: 0 3px 3px 0;
+}
+
+.searchhint {
+    background-color: #fff;
+    left: 0;
+    position: absolute;
+    top: 36px;
+    width: 461px;
+}
+
+.searchhint ul {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-image: none;
+    border: 1px solid #ccc;
+    border-top: medium none -moz-use-text-color;
+    padding: 6px 0;
+}
+
+.searchhint .item, .searchhint .item:hover {
+    display: block;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+}
+
+.searchhint .shname {
+    color: #333;
+    display: block;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+
+.searchhint a:hover .shname, .searchhint .active a .shname {
+    color: #e31436;
+}
+
+.searchhint .active a {
+    background-color: #f8f8f8;
+}
+
+/*.searchhint .del {*/
+/*color: #999;*/
+/*cursor: pointer;*/
+/*display: none;*/
+/*font-family: "iconfont" !important;*/
+/*position: absolute;*/
+/*right: 10px;*/
+/*top: 0;*/
+/*}*/
+
+.searchhint a:hover .del {
+    display: block;
+}
+
+.searchhint .del:hover {
+    color: #e31436;
+}
+
+.searchhint .tit {
+    color: #999;
+}
+
+.suggestlist {
+    height: 22px;
+    line-height: 22px;
+    margin-top: 2px;
+    overflow: hidden;
+    width: 461px;
+    padding: 0;
+}
+
+.suggestlist li {
+    float: left;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.suggestlist li a {
+    color: #999;
+}
+
+.suggestlist li a:hover {
+    color: #e31436;
+}
+
+.suggestlist li .showcolor {
+    color: #e31436;
+}
+
+.suggestlist li .sep {
+    color: #999;
+    margin: 0 10px;
+}
+
+.shopcart {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: block;
+    font-size: 13px;
+    height: 36px;
+    line-height: 33px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 43px;
+    width: 108px;
+}
+
+.shopcart:hover {
+    color: #333;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: block;
+    font-size: 13px;
+    height: 36px;
+    line-height: 33px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 43px;
+    width: 108px;
+}
+
+.shopcart .iconfont {
+    color: #a9a9a9;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+.shopcart .wrap {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    display: inline-block;
+    padding-left: 6px;
+    vertical-align: middle;
+}
+
+.shopcart .num {
+    margin-left: 3px;
+}
+
+.shopcart .num, .rightbar .num {
+    background: #e31436 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-family: Helvetica, arial;
+    font-size: 12px;
+    font-weight: normal;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    width: 20px;
+}
+
+/*-------------------电商主页-----------------------*/
+#top-tab-box {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 2px solid #151515;
+    z-index: 1001;
+    margin: 0;
+    padding: 0;
+}
+
+#top-tab {
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    position: relative;
+    width: 1090px;
+    z-index: 1002;
+}
+
+#top-cats {
+    background: #151515 none repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    font-size: 14px;
+    height: 40px;
+    overflow: visible;
+    padding-left: 0;
+    text-align: center;
+    width: 160px;
+    margin: 0;
+}
+
+#top-cats .toplevel {
+    border-bottom: 2px solid #151515;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    width: 160px;
+    margin: 0;
+    padding: 0;
+}
+
+#top-cats .lineicon {
+    display: inline-block;
+    height: 12px;
+    margin: 0 15px 0 27px;
+    overflow: hidden;
+    width: 15px;
+}
+
+#top-cats .lineicon i {
+    border-top: 2px solid #ddd;
+    display: block;
+    height: 0;
+    margin-bottom: 3px;
+    width: 15px;
+}
+
+#top-cats .catitmlst {
+    border-bottom: 1px solid #000;
+    margin-top: -1px;
+    padding: 0;
+}
+
+#top-cats .catitmlst li {
+    background: rgba(15, 15, 15, 0.82) none repeat scroll 0 0;
+    cursor: pointer;
+    padding-left: 10px;
+    text-align: left;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: content-box;
+}
+
+#top-cats .catitmlst li:hover .ctgcard {
+    display: block;
+}
+
+#top-cats .catitmlst .vcenter {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+}
+
+#top-cats .catitmlst .icon {
+    font-size: 20px;
+    height: 20px;
+    padding: 0 12px 0 14px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+#top-cats .catitmlst span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 70px;
+}
+
+#top-cats .catitmlst .arr {
+    color: #929496;
+    display: inline-block;
+    font-size: 19px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.navitm-cats .catitmlst .seg {
+    background: rgba(255, 255, 255, 0.05) none repeat scroll 0 0;
+    bottom: 1px;
+    display: block;
+    height: 1px;
+    left: 0;
+    position: relative;
+    width: 140px;
+}
+
+#top-cats .catitmlst li:hover {
+    background: #555 none repeat scroll 0 0;
+    border-left: 3px solid #e32b42;
+    padding-left: 7px;
+}
+
+#top-cats .catitmlst li:hover .seg {
+    display: none;
+}
+
+#top-cats .ctgcard {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #333;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #333;
+    cursor: auto;
+    display: none;
+    height: 399px;
+    left: 160px;
+    max-height: 399px;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    top: 42px;
+    transition: height 0.4s ease 0s;
+    width: 930px;
+    z-index: 1000;
+    box-sizing: content-box;
+}
+
+#top-cats .ctglist {
+    float: left;
+    margin: 10px 20px 20px;
+    max-height: 368px;
+    overflow: hidden;
+    width: 610px;
+}
+
+#top-cats .ctgtbl {
+    font-size: 0;
+    width: 100%;
+}
+
+#top-cats .ctgtbl .litd {
+    float: left;
+    vertical-align: top;
+    width: 50%;
+}
+
+#top-cats .ctglist .item {
+    display: inline-block;
+    height: auto;
+    line-height: normal;
+    margin: 0 25px 10px 5px;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: top;
+    width: 275px;
+}
+
+#top-cats .ctglist .item .title {
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+    font-weight: bold;
+    height: 34px;
+    line-height: 34px;
+}
+
+#top-cats .ctglist .item .title a {
+    color: #333;
+    display: inline;
+    text-align: left;
+}
+
+#top-cats .ctglist .ctgnamebox {
+    font-size: 0;
+    margin-left: -8px;
+}
+
+#top-cats .ctglist .ctgnamebox a {
+    border-left: 1px solid #ccc;
+    color: #666;
+    display: inline-block;
+    font-size: 13px;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 12px;
+    padding: 0 8px 0 10px;
+}
+
+#top-cats .ctglist .ctgnamebox a:hover {
+    background: #fff none repeat scroll 0 0;
+    text-decoration: underline;
+}
+
+#top-cats .ctglist .ctgnamebox .ctgname0 {
+    color: #666;
+}
+
+#top-cats .ctglist .ctgnamebox .ctgname3 {
+    color: #e31436;
+}
+
+#top-cats .brandbox {
+    background: #f6f6f6 none repeat scroll 0 0;
+    height: 243px;
+    overflow: hidden;
+    padding: 20px 17px 0;
+    width: 245px;
+    float: left;
+    box-sizing: content-box;
+}
+
+#top-cats .brandbox .brandlist {
+    font-size: 0;
+}
+
+#top-cats .brandbox .brandlist a {
+    float: left;
+    padding: 0;
+}
+
+#top-cats .brandbox .brandlist img {
+    border: 1px solid #eaeaea;
+    height: 80px;
+    margin: -1px 0 0 -1px;
+    width: 80px;
+}
+
+#top-cats .ctgcard .imgbox {
+    background: #f6f6f6 none repeat scroll 0 0;
+    height: 100px;
+    padding: 18px;
+    width: 244px;
+    float: right;
+    box-sizing: content-box;
+}
+
+#top-cats .ctgcard .imgbox a {
+    padding: 0;
+}
+
+#top-cats .ctgcard .imgbox img {
+    height: 100px;
+    width: 244px;
+}
+
+#func-tab {
+    float: left;
+    height: 40px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 995;
+}
+
+#func-tab li {
+    float: left;
+    height: 40px;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+#func-tab a, #func-tab a:link, #func-tab a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+#func-tab a {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+#func-tab a:hover {
+    color: #e31436;
+    text-decoration: none;
+}
+
+.topBgWrapPos {
+    background: #f6f6f6 none repeat scroll 0 0;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 100;
+}
+
+.topBgWrap {
+    background: #3f3f3f none repeat scroll 0 0;
+    position: relative;
+}
+
+.imgBox {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.sliderBox {
+    -moz-user-select: none;
+    font-size: 0;
+    height: 400px;
+    position: relative;
+}
+
+#show-pic {
+    height: 400px;
+    top: 0;
+}
+
+#show-pic .showImg {
+    height: 400px;
+    width: 1920px;
+    cursor: pointer;
+}
+
+.sliderBox .img_pagebox {
+    z-index: 101;
+    bottom: 16px;
+    left: 50%;
+    margin-left: -375px;
+    width: 920px;
+    position: absolute;
+}
+
+.sliderBox .pageBox {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sliderBox .img_pageBtn {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 14px;
+    padding-right: 14px;
+    vertical-align: baseline;
+}
+
+.sliderBox a {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    float: left;
+    height: 20px;
+    margin: 4px 2px 0;
+    position: relative;
+    width: 20px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.sliderBox a:hover .iconfont {
+    color: #e31436;
+}
+
+.sliderBox .active .iconfont {
+    color: #e31436;
+}
+
+.sliderBox .first {
+    margin-left: 0;
+}
+
+.sliderBox .last {
+    margin-right: 0;
+}
+
+.sliderBox .iconfont {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    height: 20px;
+    left: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.sliderBox .num {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    left: 0;
+    line-height: 12px;
+    position: absolute;
+    text-align: center;
+    top: 4.4px;
+    width: 20px;
+    z-index: 1;
+}
+
+.sliderBox .control {
+    z-index: 101;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.sliderBox .control div {
+    margin: 0 auto;
+    position: relative;
+    width: 1090px;
+}
+
+.sliderBox .control a {
+    background: rgba(166, 166, 166, 0.7) none repeat scroll 0 0;
+    height: 68px;
+    margin: -34px 0 0;
+    position: absolute;
+    top: 0;
+    width: 34px;
+    display: none;
+}
+
+.imgBox:hover .sliderBox .control a {
+    display: block;
+}
+
+.sliderBox .carousel-indicators .active {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    height: 20px;
+    margin: 4px 2px 0;
+    width: 20px;
+}
+
+.sliderBox .control i {
+    position: absolute;
+    top: 24px;
+    left: 6px;
+}
+
+.sliderBox .control a:hover .iconfont {
+    color: #fff;
+}
+
+.sliderBox .prev {
+    left: 169px;
+}
+
+.sliderBox .next {
+    right: 0;
+}
+
+.mainBgWrap {
+    width: 1090px;
+    margin: 0 auto;
+    min-height: 600px;
+    position: relative;
+}
+
+.sellPointBox {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    height: 44px;
+    margin-bottom: 20px;
+}
+
+.sellPointBox .contentwrap {
+    margin: 0 auto;
+    width: 1090px;
+}
+
+.sellPointBox .contentwrap .sellPoint {
+    color: #999;
+    float: left;
+    font-size: 12px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.sellPointBox .contentwrap .sellPoint .itm {
+    color: #999;
+    float: left;
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+.sellPointBox .contentwrap .sellPoint .itm i {
+    font-size: 22px;
+    margin-right: 7px;
+    vertical-align: -3px;
+}
+
+.sellPointBox .contentwrap .sellPoint .itm:hover {
+    color: #e01f35;
+}
+
+.sellPointBox .contentwrap .download {
+    color: #e01f35;
+    float: right;
+    line-height: 44px;
+}
+
+.sellPointBox .contentwrap .download .phone {
+    font-size: 15px;
+    margin-right: 5px;
+    vertical-align: -2px;
+}
+
+.sellPointBox .contentwrap .download a {
+    color: #e01f35;
+    font-size: 12px;
+}
+
+.rowofx {
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
+.rowofx .rowbox {
+    margin: 0 auto;
+    width: 1090px;
+}
+
+.rowofx .rowwrap {
+    width: 1090px;
+    margin-bottom: 10px;
+}
+
+.rowofx .rowof4 {
+    margin-right: -10px;
+}
+
+.rowofx .rowof4 li {
+    float: left;
+    margin-right: 10px;
+}
+
+.rowofx .rowof4 .pic {
+    height: 220px;
+    width: 265px;
+    display: inline-block;
+}
+
+.rowofx .rowof4 .pic img {
+    height: 100%;
+    width: 100%;
+}
+
+.dailylimit .tit {
+    font-size: 14px;
+    color: #999;
+    line-height: 32px;
+    margin: 37px 0 10px;
+    position: relative;
+    text-align: left;
+}
+
+.dailylimit .tit .big {
+    margin-right: 10px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.dailylimit .timebox {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.dailylimit .timebox i {
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 1.5px;
+    text-align: center;
+    vertical-align: 1px;
+    width: 20px;
+}
+
+.dailylimit .tit .more {
+    color: #333;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+.dailylimit .cnt {
+    border-top: 2px solid #333;
+}
+
+.dailylimit .cnt .goodslist {
+    border-left: 1px solid #eaeaea;
+    float: left;
+    width: 868px;
+}
+
+.dailylimit .cnt .goodslist .goods {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    float: left;
+    height: 188px;
+    position: relative;
+    width: 433px;
+}
+
+.dailylimit .cnt .goodslist .goods .pic {
+    display: inline-block;
+    float: left;
+    height: 188px;
+    margin-right: -188px;
+    position: relative;
+    width: 188px;
+}
+
+.dailylimit .cnt .goodslist .goods .detail {
+    float: right;
+    height: 188px;
+    margin-right: 20px;
+    position: relative;
+    width: 205px;
+    text-align: left;
+}
+
+.dailylimit .cnt .goods .intro {
+    height: 23px;
+    margin: 20px 0 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dailylimit .cnt .goods .intro a {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dailylimit .cnt .goods .shortTitle {
+    height: 49px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.dailylimit .cnt .goods .shortTitle a {
+    color: #666;
+    font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.dailylimit .cnt .goods .price {
+    color: #e11935;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 14px 0 2px;
+}
+
+.dailylimit .cnt .goods .price b {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.dailylimit .cnt .goods .price span {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+.dailylimit .cnt .goods .price del {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.dailylimit .cnt .goods .process {
+    border: 1px solid #f3c7c7;
+    border-radius: 9px;
+    color: #de2634;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 100px;
+    box-sizing: content-box;
+}
+
+.dailylimit .cnt .goods .process b {
+    background-color: #ffd2c5;
+    display: inline-block;
+    height: 100%;
+}
+
+.dailylimit .cnt .goods .process .processtext {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+.dailylimit .cnt .goods .btn {
+    background-color: #de2634;
+    border: 1px solid #de2634;
+    bottom: 22px;
+    color: #fff;
+    line-height: 14px;
+    position: absolute;
+    right: 0;
+    width: 78px;
+    outline: medium none;
+}
+
+.dailylimit .cnt .aside {
+    float: right;
+    height: 378px;
+    width: 221px;
+}
+
+.dailylimit .cnt .aside .pic {
+    display: inline-block;
+}
+
+.dailylimit .cnt .aside img {
+    height: 378px;
+    width: 221px;
+    background: #fff none repeat scroll 0 0;
+}
+
+#doc-foot {
+    margin: 0;
+}
+
+.footBgWrap {
+    background: #fff none repeat scroll 0 0;
+    border-top: 1px solid #eaeaea;
+}
+
+.footBgWrap .box {
+    margin: 0 auto;
+    width: 1196px;
+}
+
+.footBgWrap .box .btmlist {
+    border-bottom: 1px solid #eaeaea;
+    padding: 40px 0;
+}
+
+.footBgWrap .box .btmlist li {
+    float: left;
+    width: 25%;
+    text-align: left;
+}
+
+.footBgWrap .box .btmlist i {
+    float: left;
+    margin: 0 12px 0 0;
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.footBgWrap .box .btmlist .tit {
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.footBgWrap .box .btmlist .desc {
+    font-size: 14px;
+}
+
+.footBgWrap .box .btmlist .tit, .footBgWrap .box .btmlist .desc {
+    display: block;
+    line-height: 22px;
+}
+
+/*------------------------------------------游戏模块----------------------------------------------*/
+/*-------------------文字冒险游戏主页-----------------------*/
+.text {
+    background-image: url("../img/game/text/bg.jpg");
+    border-radius: 5px;
+    height: 53.8%;
+    left: 37%;
+    position: absolute;
+    top: 23.1%;
+    width: 26%;
+    text-align: center;
+}
+
+.text .text-word {
+    font-size: 1vmax;
+    font-family: "楷体";
+    color: #000000;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 1);
+}
+
+.text .dead .text-word {
+    color: red;
+}
+
+/*-------------------城市精灵go图鉴主页-----------------------*/
+
+#elf {
+    height: 840px;
+    width: 1255px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url("../img/game/go/gobg.jpg");
+}
+
+#elf .go-elf-div {
+    width: 105px;
+    height: 105px;
+    color: #000000;
+    font-family: "隶书";
+    text-shadow: 5px 5px 5px rgba(225, 225, 225, 1);
+    position: relative;
+}
+
+#elf .go-elf-text {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    z-index: 51;
+    cursor: pointer;
+}
+
+#elf .go-elf-border {
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    z-index: 49;
+}
+
+#elf .go-img {
+    height: 80px;
+    width: 80px;
+    opacity: 0.5;
+    z-index: 50;
+    position: absolute;
+    left: 25px;
+    top: 10px;
+}
+
+#elf .go-img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#elf .go-elf-detail {
+    width: 50%;
+    height: 50%;
+    z-index: 100;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    background-image: url("../img/game/go/bg2.jpg");
+    border: 5px solid white;
+    border-radius: 10%;
+    text-align: center;
+}
+
+#elf .go-img-detail {
+    position: absolute;
+    top: 10%;
+}
+
+#elf .go-img-detail img {
+    width: 200px;
+    height: 200px;
+}
+
+#elf .go-elf-detail button {
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+}
+
+#elf .go-elf-desc {
+    font-size: 20px;
+    text-align: left;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+}
+
+/*-------------------3D文字-----------------------*/
+#canvas-3Dtext input {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 -5px 45px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 10px;
+    outline: medium none;
+    padding: 10px;
+    text-shadow: 1px 1px 6px rgba(255, 255, 255, 1);
+    width: 100%;
+}
+
+#canvas-3Dtext input:focus {
+    background: rgba(22, 112, 22, 0.3) none repeat scroll 0 0;
+}
+
+/*-------------------rpg游戏-----------------------*/
+#fight_scene {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#rolemap {
+
+}
+
+#rolemap button {
+    vertical-align: middle;
+    height: 28px;
+    width: 90px;
+    background-color: lightsalmon;
+    color: #000000;
+}
+
+#statis {
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#statis #clear_button {
+    vertical-align: middle;
+    position: fixed;
+    right: 20px;
+    height: 28px;
+    width: 90px;
+    background-color: lightsalmon;
+    color: #000000;
+}
+
+#statis .panel-heading {
+    color: #000000;
+}
+
+#statis .panel-body {
+    background-color: #000000;
+    padding: 0;
+    overflow: auto;
+    overflow-y: scroll;
+    height: 175px;
+    text-align: center;
+}
+
+#statis .console {
+    color: #00FF00;
+    margin: 0;
+    word-break: normal;
+    width: auto;
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: hidden;
+    line-height: 1;
+    font-size: 15px;
+    font-family: '楷体';
+}
+
+/*-------------------斗地主-----------------------*/
+#poker_scene {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+}
+
+#poker_scene img {
+    display: block;
+    width: 85px;
+}
+
+#poker_scene .poker {
+    cursor: pointer;
+}
+
+#poker_scene .poker_noChoose {
+    margin: 50px 0 0 0;
+}
+
+#poker_scene .poker_Choosed {
+    margin: 0;
+}
+
+/*底牌区*/
+#hideCards {
+    width: 20%;
+    height: 125px;
+    position: absolute;
+    left: 40%;
+}
+
+/*A牌区*/
+#poker_playerA {
+    width: 60%;
+    height: 250px;
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+}
+
+#poker_playerA .poker_head_sign {
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    top: -12%;
+    left: 40%;
+}
+
+#a_btn {
+    height: 75px;
+}
+
+#a_poker {
+    height: 175px;
+}
+
+#poker_playerA .poker {
+    float: left;
+}
+
+/*B牌区*/
+#poker_playerB {
+    width: 10%;
+    height: 600px;
+    position: absolute;
+    bottom: 200px;
+    right: 0px;
+}
+
+#poker_playerB .poker_head_sign {
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    left: 0px;
+}
+
+#poker_playerB .poker {
+    height: 25px;
+}
+
+#poker_playerB img {
+    margin: 0 auto;
+}
+
+/*C牌区*/
+#poker_playerC {
+    width: 10%;
+    height: 600px;
+    position: absolute;
+    bottom: 200px;
+    left: 0px;
+}
+
+#poker_playerC .poker_head_sign {
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    right: 0px;
+}
+
+#poker_playerC .poker {
+    height: 25px;
+}
+
+#poker_playerC img {
+    margin: 0 auto;
+}
+
+/*出牌区*/
+#pushed_pokers {
+    top: 150px;
+    right: 15%;
+    position: absolute;
+    width: 70%;
+    height: 400px;
+    z-index: -10;
+}
+
+#a_pushed_pokers {
+    height: 150px;
+    width: 60%;
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+}
+
+#a_pushed_pokers div {
+    float: left;
+}
+
+#b_pushed_pokers {
+    height: 400px;
+    width: 20%;
+    position: absolute;
+    right: 0;
+}
+
+#b_pushed_pokers div {
+    height: 25px;
+}
+
+#b_pushed_pokers img {
+    margin: 0 auto;
+}
+
+#c_pushed_pokers {
+    height: 400px;
+    width: 20%;
+    position: absolute;
+    left: 0;
+}
+
+#c_pushed_pokers div {
+    height: 25px;
+}
+
+#c_pushed_pokers img {
+    margin: 0 auto;
+}
+
+/*按钮区*/
+#pokerStartBtn {
+    position: absolute;
+    height: 12.9%;
+    width: 3.1%;
+    top: 28%;
+    left: 47%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#callLandBtn {
+    margin: 20px 0 0 20px;
+    left: auto;
+    height: 40px;
+    width: 4.1%;
+    cursor: pointer;
+    background-image: url("../img/game/poker/Call.png");
+    background-size: 100% 100%
+}
+
+#unCallLandBtn {
+    margin: 20px 0 0 20px;
+    left: auto;
+    height: 40px;
+    width: 4.1%;
+    cursor: pointer;
+    background-image: url("../img/game/poker/unCall.png");
+    background-size: 100% 100%
+}
+
+#pushPokerBtn {
+    margin: 20px 0 0 20px;
+    left: auto;
+    height: 40px;
+    width: 4.1%;
+    cursor: pointer;
+    background-image: url("../img/game/poker/push.png");
+    background-size: 100% 100%
+}
+
+#unPushPokerBtn {
+    margin: 20px 0 0 20px;
+    left: auto;
+    height: 40px;
+    width: 4.1%;
+    cursor: pointer;
+    background-image: url("../img/game/poker/unPush.png");
+    background-size: 100% 100%
+}
+
+/*-------------------爱心鱼-----------------------*/
+#fish_scene {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#fish_scene .all_canvas {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 0;
+}
+
+#canvas_front {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#canvas_behind {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}

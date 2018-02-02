@@ -1,0 +1,70 @@
+/*按钮样式*/
+.modal_btnSave {
+    display: inline-block;
+    background-color: #EC732C;
+    color: #FFF;
+    width: 60px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #EC732C;
+}
+
+.modal_btnSave:hover {
+    background-color: #FF9933;
+    color: #FFF;
+}
+
+.modal_btnCancel {
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    line-height: 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #FFF;
+    border: 1px solid #EC732C;
+    color: #EC732C;
+}
+
+.modal_btnCancel:hover {
+    background-color: #FF9933;
+    color: #FFF;
+}
+
+.stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 0.04em;
+}
+
+.btn-large {
+    margin-bottom: 10px;
+    padding: 9px 14px;
+    font-size: 15px;
+    line-height: normal;
+    border-radius: 5px;
+}
+
+.btn-primary :hover {
+    color: #ffffff;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    list-style: outside none none;
+}
+
+a {
+    cursor: pointer;
+    outline: medium none;
+}

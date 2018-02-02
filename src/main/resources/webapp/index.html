@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>我的世界海购</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
+    <link rel="shortcut icon" href="img/common/favicon.png"/>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fonts/stylesheet.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/inner.css"/>
+
+</head>
+<body ng-controller="myCtrl" style="height: 100%; text-align:center">
+
+<div>
+    <div ng-include="'views/sitebar.html'"></div>
+</div>
+<div>
+    <div ng-view></div>
+</div>
+
+<script type="text/javascript" src="js/other/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/other/code4net.slideshow.js"></script>
+<script type="text/javascript" src="js/other/ajax.js"></script>
+<script type="text/javascript" src="js/other/kinetic-v5.1.0.min.js"></script>
+<script type="text/javascript" src="js/other/jquery.jsPlumb-1.4.0-all.js"></script>
+<script type="text/javascript" src="js/other/jquery.lightbox-0.5.pack.js"></script>
+<!--<script type="text/javascript" src="js/other/go.js"></script>-->
+<script type="text/javascript" src="js/other/digit.js"></script>
+<script type="text/javascript" src="js/other/particles.min.js"></script>
+<script type="text/javascript" src="js/other/commonFunctions.js"></script>
+
+<!--<script type="text/javascript" src="components/cv-components.min.js"></script>-->
+<script type="text/javascript" src="components/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="components/angularjs/angular-cookies.min.js"></script>
+<script type="text/javascript" src="components/angularjs/angular-route.min.js"></script>
+<script type="text/javascript" src="components/angularjs/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="components/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="components/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+<script type="text/javascript" src="js/service/CommService.js"></script>
+<script type="text/javascript" src="js/service/ModalService.js"></script>
+
+<script type="text/javascript" src="directive/directive.js"></script>
+
+<script type="text/javascript" src="js/route.js"></script>
+
+<script type="text/javascript" src="js/interceptor.js"></script>
+
+<script type="text/javascript" src="js/controllers/modal/ModalCtrl.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
