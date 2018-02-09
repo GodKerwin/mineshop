@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     name: 127.0.0.1_mine
-    url: jdbc:mysql://127.0.0.1:3306/mine?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/mineshop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     username: root
     password: rootroot
     driver-class-name: com.mysql.jdbc.Driver
@@ -19,3 +19,10 @@ mybatis:
       map-underscore-to-camel-case: true
       default-fetch-size: 100
       default-statement-timeout: 30
+
+mail:
+  url: 172.16.23.33:8081
+  username: MineWorldServer@163.com
+  password: cptbtptp123
+  content: Click here to activate your account
+  subject: 来自我的世界海购网站的激活邮件
