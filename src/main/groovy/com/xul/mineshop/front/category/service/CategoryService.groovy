@@ -29,7 +29,7 @@ class CategoryService {
     private CategorySecondaryMapper categorySecondaryMapper
 
     /**
-     * 根据顺序获取首页轮播广告
+     * 根据类型获取主分类
      */
     List<CategoryInfo> queryCategoryByType(CategoryType category_type, Integer offset, Integer size) {
         try {

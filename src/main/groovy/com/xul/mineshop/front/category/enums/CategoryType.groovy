@@ -1,5 +1,7 @@
 package com.xul.mineshop.front.category.enums
 
+import com.fasterxml.jackson.annotation.JsonValue
+
 /**
  * 分类类型
  * Created by lxu on 2018/2/8.
@@ -7,20 +9,29 @@ package com.xul.mineshop.front.category.enums
 enum CategoryType {
 
     //纵向分类
-    VERTICAL(0, "VERTICAL"),
+    VERTICAL(0),
     //横向分类（快捷入口）
-    HORIZONTAL(1, "HORIZONTAL")
+    HORIZONTAL(1)
 
     int value
-    String name
 
-    CategoryType(int value, String name) {
+    CategoryType(int value) {
         this.value = value
-        this.name = name
+    }
+
+    @JsonValue
+    int getValue() {
+        return value
+    }
+
+    void setValue(int value) {
+        this.value = value
     }
 
     @Override
     String toString() {
-        return this.name + "[" + this.value + "]"
+        return "CategoryType{" +
+                "value=" + value +
+                '}'
     }
 }

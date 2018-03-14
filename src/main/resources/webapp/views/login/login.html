@@ -1,0 +1,59 @@
+<header id="docHead">
+    <div id="docHeadWrap">
+        <a class="logomine" title="我的世界海购"></a>
+        <div id="topimg"></div>
+    </div>
+</header>
+<div class="login-banner">
+    <div class="m-loginBody">
+        <!--<img src="//haitao.nos.netease.com/18cc14f7f9b94b1ebac54679f569d7d2.png" alt="" class="defaultimg">-->
+        <div class="m-loginWrap clearfix">
+            <div class="loginForm">
+                <div class="m-loginshow m-loginshow-reg">
+                    <div class="loginwrap" ng-if="loginshow!='register'">
+                        <div class="top">
+                            <div class="head1" ng-class={active:loginshow=='phone'} ng-click="changeLoginTab('phone')">手机号登录</div>
+                            <span class="line">&nbsp;</span>
+                            <div class="head2" ng-class={active:loginshow=='mail'} ng-click="changeLoginTab('mail')">邮箱登录</div>
+                        </div>
+                        <div id="loginbox" class="ph-loading urswarp loginbox" ng-if="loginshow=='phone'">
+                            <div ng-include="'views/login/phone.html'"></div>
+                        </div>
+                        <div id="loginbox2" class="ph-loading urswarp loginbox2" ng-if="loginshow=='mail'">
+                            <div ng-include="'views/login/mail.html'"></div>
+                        </div>
+                        <div class="bottom">
+                            <ul class="thirdlogin">
+                                <li class="thirdicon">
+                                    <i class="iconfont icn" style="color: #4cae4c">&#xe60f;</i>
+                                </li>
+                                <li class="thirdicon">
+                                    <i class="iconfont icn" style="color: #3a87ad">&#xe69e;</i>
+                                </li>
+                                <li class="thirdicon">
+                                    <i class="iconfont icn" style="color: #FF9900">&#xe6a3;</i>
+                                </li>
+                                <li class="thirdicon">
+                                    <i class="iconfont icn" style="color: #28B1FF">&#xe665;</i>
+                                </li>
+                            </ul>
+                            <a class="gotoreg" ng-click="changeLoginTab('register')">
+                                手机快捷注册
+                                <i class="iconfont icn" style="color: #de2634">&#xe602;</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="regwrap" ng-if="loginshow=='register'">
+                        <div class="top regtop">
+                            <span class="text">欢迎注册</span>
+                            <span class="gotologin">已有帐号？<a ng-click="changeLoginTab('phone')">去登录></a></span>
+                        </div>
+                        <div id="loginbox3" class="ph-loading loginbox3"></div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="redirectUrl" value="https://www.kaola.com/?tag=6ed70a8d367d51300a7f4ee72ff2b8ee&amp;__da_ecdaad89_5794383fd9833c80" />
+        </div>
+    </div>
+</div>
+<div class="foot"></div>

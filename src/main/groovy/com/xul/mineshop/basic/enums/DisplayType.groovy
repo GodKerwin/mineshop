@@ -1,5 +1,7 @@
 package com.xul.mineshop.basic.enums
 
+import com.fasterxml.jackson.annotation.JsonValue
+
 /**
  * 展示类型
  * Created by lxu on 2018/2/9.
@@ -7,22 +9,31 @@ package com.xul.mineshop.basic.enums
 enum DisplayType {
 
     //正常
-    DEL(0, "NORMAL"),
+    NORMAL(0),
     //加红
-    NORMAL(1, "RED"),
+    RED(1),
     //搜索框显示
-    SEARCH(2, "SEARCH")
+    SEARCH(2)
 
     int value
-    String name
 
-    DisplayType(int value, String name) {
+    DisplayType(int value) {
         this.value = value
-        this.name = name
+    }
+
+    @JsonValue
+    int getValue() {
+        return value
+    }
+
+    void setValue(int value) {
+        this.value = value
     }
 
     @Override
     String toString() {
-        return this.name + "[" + this.value + "]"
+        return "DisplayType{" +
+                "value=" + value +
+                '}'
     }
 }

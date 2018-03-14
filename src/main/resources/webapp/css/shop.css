@@ -28,11 +28,11 @@ body {
 
 @font-face {
     font-family: 'iconfont';  /* project id 542854 */
-    src: url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.eot');
-    src: url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.woff') format('woff'),
-    url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_542854_ndazw2ofq5x6flxr.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.eot');
+    src: url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.woff') format('woff'),
+    url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -1261,436 +1261,366 @@ body {
     line-height: 22px;
 }
 
-/*------------------------------------------游戏模块----------------------------------------------*/
-/*-------------------文字冒险游戏主页-----------------------*/
-.text {
-    background-image: url("../img/game/text/bg.jpg");
-    border-radius: 5px;
-    height: 53.8%;
-    left: 37%;
-    position: absolute;
-    top: 23.1%;
-    width: 26%;
-    text-align: center;
+/*--------------------------------------------登录页------------------------------------------------*/
+#docHead {
+    border-bottom: 1px solid #e8e8ea;
+    background: #fdfbfe none repeat scroll 0 0;
+    height: 100px;
+    position: relative;
+    z-index: 1003;
 }
 
-.text .text-word {
-    font-size: 1vmax;
-    font-family: "楷体";
-    color: #000000;
-    text-shadow: 5px 5px 5px rgba(255, 255, 255, 1);
-}
-
-.text .dead .text-word {
-    color: red;
-}
-
-/*-------------------城市精灵go图鉴主页-----------------------*/
-
-#elf {
-    height: 840px;
-    width: 1255px;
+#docHeadWrap {
+    width: 1000px;
+    height: 100px;
     margin: 0 auto;
     position: relative;
-    background-image: url("../img/game/go/gobg.jpg");
 }
 
-#elf .go-elf-div {
-    width: 105px;
-    height: 105px;
-    color: #000000;
-    font-family: "隶书";
-    text-shadow: 5px 5px 5px rgba(225, 225, 225, 1);
-    position: relative;
-}
-
-#elf .go-elf-text {
-    position: absolute;
-    top: 10px;
-    left: 40px;
-    z-index: 51;
+#docHead .logomine {
+    background: url("../img/onlineshop/logomine.png") left center no-repeat;
+    background-size: 200px 80px;
     cursor: pointer;
-}
-
-#elf .go-elf-border {
-    height: 100px;
-    width: 100px;
-    opacity: 1;
-    z-index: 49;
-}
-
-#elf .go-img {
     height: 80px;
-    width: 80px;
-    opacity: 0.5;
-    z-index: 50;
-    position: absolute;
-    left: 25px;
-    top: 10px;
-}
-
-#elf .go-img:hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
-#elf .go-elf-detail {
-    width: 50%;
-    height: 50%;
-    z-index: 100;
-    position: absolute;
-    top: 5%;
-    left: 25%;
-    background-image: url("../img/game/go/bg2.jpg");
-    border: 5px solid white;
-    border-radius: 10%;
-    text-align: center;
-}
-
-#elf .go-img-detail {
-    position: absolute;
-    top: 10%;
-}
-
-#elf .go-img-detail img {
-    width: 200px;
-    height: 200px;
-}
-
-#elf .go-elf-detail button {
-    position: absolute;
-    bottom: 10%;
-    left: 45%;
-}
-
-#elf .go-elf-desc {
-    font-size: 20px;
-    text-align: left;
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    right: 10%;
-    top: 20%;
-}
-
-/*-------------------3D文字-----------------------*/
-#canvas-3Dtext input {
-    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    box-shadow: 0 -5px 45px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 13px;
-    margin-bottom: 10px;
+    left: 0;
+    line-height: 80px;
     outline: medium none;
-    padding: 10px;
-    text-shadow: 1px 1px 6px rgba(255, 255, 255, 1);
-    width: 100%;
-}
-
-#canvas-3Dtext input:focus {
-    background: rgba(22, 112, 22, 0.3) none repeat scroll 0 0;
-}
-
-/*-------------------rpg游戏-----------------------*/
-#fight_scene {
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-#rolemap {
-
-}
-
-#rolemap button {
-    vertical-align: middle;
-    height: 28px;
-    width: 90px;
-    background-color: lightsalmon;
-    color: #000000;
-}
-
-#statis {
-    margin: 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-#statis #clear_button {
-    vertical-align: middle;
-    position: fixed;
-    right: 20px;
-    height: 28px;
-    width: 90px;
-    background-color: lightsalmon;
-    color: #000000;
-}
-
-#statis .panel-heading {
-    color: #000000;
-}
-
-#statis .panel-body {
-    background-color: #000000;
-    padding: 0;
-    overflow: auto;
-    overflow-y: scroll;
-    height: 175px;
-    text-align: center;
-}
-
-#statis .console {
-    color: #00FF00;
-    margin: 0;
-    word-break: normal;
-    width: auto;
-    display: block;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow: hidden;
-    line-height: 1;
-    font-size: 15px;
-    font-family: '楷体';
-}
-
-/*-------------------斗地主-----------------------*/
-#poker_scene {
     position: absolute;
-    width: 100%;
-    height: 90%;
+    top: 10px;
+    width: 330px;
+    z-index: 109;
 }
 
-#poker_scene img {
-    display: block;
-    width: 85px;
-}
-
-#poker_scene .poker {
-    cursor: pointer;
-}
-
-#poker_scene .poker_noChoose {
-    margin: 50px 0 0 0;
-}
-
-#poker_scene .poker_Choosed {
-    margin: 0;
-}
-
-/*底牌区*/
-#hideCards {
-    width: 20%;
-    height: 125px;
-    position: absolute;
-    left: 40%;
-}
-
-/*A牌区*/
-#poker_playerA {
-    width: 60%;
-    height: 250px;
-    position: absolute;
-    bottom: 0px;
-    left: 20%;
-}
-
-#poker_playerA .poker_head_sign {
+#topimg {
     height: 100px;
-    width: 50px;
+    left: 458px;
+    width: 504px;
     position: absolute;
-    top: -12%;
-    left: 40%;
+    top: 0;
+    background: url("../img/onlineshop/banner/loginsubtitle.png") no-repeat;
 }
 
-#a_btn {
-    height: 75px;
+.login-banner {
+    /*background: #f8f8f8 no-repeat center top;*/
+    background-image: url("../img/onlineshop/banner/loginbg.png");
 }
 
-#a_poker {
-    height: 175px;
-}
-
-#poker_playerA .poker {
-    float: left;
-}
-
-/*B牌区*/
-#poker_playerB {
-    width: 10%;
-    height: 600px;
-    position: absolute;
-    bottom: 200px;
-    right: 0px;
-}
-
-#poker_playerB .poker_head_sign {
-    height: 100px;
-    width: 50px;
-    position: absolute;
-    left: 0px;
-}
-
-#poker_playerB .poker {
-    height: 25px;
-}
-
-#poker_playerB img {
+.m-loginBody {
+    height: 520px;
     margin: 0 auto;
-}
-
-/*C牌区*/
-#poker_playerC {
-    width: 10%;
-    height: 600px;
-    position: absolute;
-    bottom: 200px;
-    left: 0px;
-}
-
-#poker_playerC .poker_head_sign {
-    height: 100px;
-    width: 50px;
-    position: absolute;
-    right: 0px;
-}
-
-#poker_playerC .poker {
-    height: 25px;
-}
-
-#poker_playerC img {
-    margin: 0 auto;
-}
-
-/*出牌区*/
-#pushed_pokers {
-    top: 150px;
-    right: 15%;
-    position: absolute;
-    width: 70%;
-    height: 400px;
-    z-index: -10;
-}
-
-#a_pushed_pokers {
-    height: 150px;
-    width: 60%;
-    position: absolute;
-    bottom: 0px;
-    left: 20%;
-}
-
-#a_pushed_pokers div {
-    float: left;
-}
-
-#b_pushed_pokers {
-    height: 400px;
-    width: 20%;
-    position: absolute;
-    right: 0;
-}
-
-#b_pushed_pokers div {
-    height: 25px;
-}
-
-#b_pushed_pokers img {
-    margin: 0 auto;
-}
-
-#c_pushed_pokers {
-    height: 400px;
-    width: 20%;
-    position: absolute;
-    left: 0;
-}
-
-#c_pushed_pokers div {
-    height: 25px;
-}
-
-#c_pushed_pokers img {
-    margin: 0 auto;
-}
-
-/*按钮区*/
-#pokerStartBtn {
-    position: absolute;
-    height: 12.9%;
-    width: 3.1%;
-    top: 28%;
-    left: 47%;
-    z-index: 100;
-    cursor: pointer;
-}
-
-#callLandBtn {
-    margin: 20px 0 0 20px;
-    left: auto;
-    height: 40px;
-    width: 4.1%;
-    cursor: pointer;
-    background-image: url("../img/game/poker/Call.png");
-    background-size: 100% 100%
-}
-
-#unCallLandBtn {
-    margin: 20px 0 0 20px;
-    left: auto;
-    height: 40px;
-    width: 4.1%;
-    cursor: pointer;
-    background-image: url("../img/game/poker/unCall.png");
-    background-size: 100% 100%
-}
-
-#pushPokerBtn {
-    margin: 20px 0 0 20px;
-    left: auto;
-    height: 40px;
-    width: 4.1%;
-    cursor: pointer;
-    background-image: url("../img/game/poker/push.png");
-    background-size: 100% 100%
-}
-
-#unPushPokerBtn {
-    margin: 20px 0 0 20px;
-    left: auto;
-    height: 40px;
-    width: 4.1%;
-    cursor: pointer;
-    background-image: url("../img/game/poker/unPush.png");
-    background-size: 100% 100%
-}
-
-/*-------------------爱心鱼-----------------------*/
-#fish_scene {
-    width: 800px;
-    height: 600px;
-    margin: 0 auto;
-}
-
-#fish_scene .all_canvas {
     position: relative;
-    width: 800px;
-    height: 600px;
-    margin: 0;
+    width: 1000px;
 }
 
-#canvas_front {
+.m-loginBody .defaultimg {
+    height: 203px;
+    left: 10px;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+    top: 154px;
+    width: 400px;
 }
 
-#canvas_behind {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
+.m-loginWrap {
+    font-size: 12px;
+    box-sizing: content-box;
 }
+
+.m-loginBody .m-loginWrap {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    position: absolute;
+    right: 40px;
+    top: 48px;
+    width: 350px;
+    z-index: 102;
+}
+
+.m-loginBody .loginform {
+    float: left;
+}
+
+.m-loginshow {
+    z-index: 1000;
+}
+
+.m-loginshow .top {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 16px;
+    height: 52px;
+    line-height: 52px;
+    position: relative;
+    width: 350px;
+}
+
+.m-loginshow .top div {
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    text-align: center;
+    width: 175px;
+}
+
+.m-loginshow .top .head1:hover, .m-loginshow .top .head2:hover {
+    color: #e31436;
+}
+
+.m-loginshow .top .active {
+    color: #e31436;
+}
+
+.m-loginshow .top .line {
+    border-right: 1px solid #ddd;
+    height: 20px;
+    left: 175px;
+    position: absolute;
+    top: 17px;
+    width: 0;
+}
+
+#loginbox {
+    height: 250px;
+    display: block;
+    position: static;
+}
+
+#loginbox2 {
+    height: 230px;
+    position: static;
+}
+
+.m-loginshow .bottom {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    height: 20px;
+    padding: 10px 40px;
+    width: 270px;
+    box-sizing: content-box;
+}
+
+.m-loginshow .thirdlogin {
+    float: left;
+    width: 160px;
+}
+
+.m-loginshow .thirdicon {
+    display: block;
+    float: left;
+    height: 22px;
+    margin-right: 10px;
+    position: relative;
+    width: 22px;
+    font-size: 25px;
+    cursor: pointer;
+    bottom: 6px;
+}
+
+.m-loginshow .gotoreg {
+    color: #e31436;
+    cursor: pointer;
+    display: block;
+    float: right;
+    line-height: 22px;
+    width: 105px;
+}
+
+.m-loginshow .gotoreg i {
+    font-size: 12px;
+}
+
+.m-loginshow-reg .regwrap {
+    display: block;
+    position: static;
+}
+
+.m-loginshow .regtop {
+    padding: 0 40px;
+    width: 270px;
+}
+
+.m-loginshow .top {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 16px;
+    height: 52px;
+    line-height: 52px;
+    position: relative;
+    width: 350px;
+}
+
+.m-loginshow .regtop .text {
+    color: #e31436;
+    font-weight: bold;
+}
+
+.m-loginshow .gotologin {
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+}
+
+#loginbox3 {
+    height: 356px;
+    width: 420px;
+}
+
+/*-------------手机登录-------------*/
+
+#login_tab {
+    background-color: transparent;
+    border-radius: 0;
+    width: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+#login_tab i {
+    color: #999;
+    cursor: default;
+}
+
+#login_tab .m-cnt {
+    background-color: #fff;
+    padding: 20px 40px 15px;
+    width: 270px;
+    -moz-user-select: none;
+    box-sizing: content-box;
+}
+
+#login_tab .u-tab {
+    padding: 0 0 10px;
+    width: 270px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.u-tab .tab1 {
+    height: 14px;
+    line-height: 14px;
+    color: #5e5e5e;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.u-tab .tab1 span:hover {
+    color: #e31436 !important;
+}
+
+#login_tab .m-cnt .loginbox {
+    background: #fff none repeat scroll 0 0;
+    border-color: #d5d5d5;
+    border-radius: 2px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 119;
+    padding-top: 10px;
+}
+
+#login_tab .m-cnt .u-input {
+    height: 36px;
+    margin: 2px 0 18px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+#login_tab .m-cnt .u-input i {
+    position: absolute;
+    font-size: 19px;
+    left: 12px;
+    top: 4px;
+}
+
+#login_tab .u-input input {
+    font-size: 14px;
+    font-weight: normal;
+    height: 33px;
+    line-height: 33px;
+    padding-left: 0;
+    width: 180px;
+    background: #fff none repeat scroll 0 0;
+    border: 0 none;
+    color: #333;
+}
+
+#login_tab .loginbox button {
+    background-color: #e31436;
+    color: #fff;
+    outline: 0 none;
+}
+
+#login_tab .loginbox button:hover {
+    background-color: #f5345e;
+}
+
+#login_tab .m-unlogin {
+    padding: 20px 0 15px;
+    font-size: 0;
+    height: 16px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+#login_tab .m-unlogin :hover {
+    color: #e31436
+}
+
+#login_tab .m-unlogin .b-unlogin {
+    border-right: medium none;
+    display: block;
+    float: left;
+    margin-right: 8px;
+    width: 104px;
+    position: relative;
+}
+
+#login_tab .m-unlogin .b-unlogin .u-checkbox {
+    border: 1px solid #aaa;
+    color: #999;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: 14px;
+    width: 14px;
+}
+
+#login_tab .m-unlogin .b-unlogin .gou {
+    color: #449d44;
+    font-size: 12px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+#login_tab .m-unlogin .b-unlogin label {
+    color: #999;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 8px;
+}
+
+#login_tab .m-unlogin .b-unlogin label:hover {
+    color: #e31436;
+    cursor: pointer;
+}
+
+.m-cnt .m-unlogin .forgetpwdReg {
+    color: #999;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    height: 12px;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+/*--------------------------------------------注册页------------------------------------------------*/

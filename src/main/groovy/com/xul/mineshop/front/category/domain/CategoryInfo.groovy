@@ -38,6 +38,16 @@ class CategoryInfo implements Serializable {
      */
     Integer mod_time
 
+    /**
+     * 二三级类目列表
+     */
+    List<CategorySecondaryInfo> secondary_list
+
+    /**
+     * 图片列表
+     */
+    List<CategoryImageInfo> image_list
+
     @Override
     String toString() {
         return "CategoryInfo{" +
@@ -47,6 +57,8 @@ class CategoryInfo implements Serializable {
                 ", order=" + order +
                 ", crt_time=" + crt_time +
                 ", mod_time=" + mod_time +
+                ", secondary_list=" + secondary_list +
+                ", image_list=" + image_list +
                 '}'
     }
 }

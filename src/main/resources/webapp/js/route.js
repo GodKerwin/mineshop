@@ -1,3 +1,4 @@
+"use strict";
 var Route = angular.module("Route", ['ngRoute']);
 
 //配置路由
@@ -9,9 +10,12 @@ Route.config(['$routeProvider',
         }).when('/about', {
             templateUrl: 'views/about.html',
             controller: "aboutCtrl"
-        }).when('/login', {
+        }).when('/login/:tab', {
             templateUrl: 'views/login/login.html',
             controller: "loginCtrl"
+        }).when('/test', {
+            templateUrl: 'views/login/phone.html',
+            controller: "testCtrl"
         }).otherwise({
             redirectTo: "/index"
         })

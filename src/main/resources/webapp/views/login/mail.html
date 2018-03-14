@@ -1,0 +1,45 @@
+<div id="login_tab">
+    <div class="m-cnt">
+        <form name="login_phone" ng-submit="login()" novalidate>
+            <div class="m-container">
+                <div class="inputbox">
+                    <div class="u-input">
+                        <i class="iconfont icn">&#xe604;</i>
+                        <input id="email" placeholder="请输入邮箱账号" name="email">
+                    </div>
+                </div>
+                <div class="inputbox">
+                    <div class="u-input">
+                        <i class="iconfont icn">&#xe654;</i>
+                        <input id="password" placeholder="请输入密码" name="password" type="password">
+                    </div>
+                </div>
+                <div class="f-cb loginbox">
+                    <button class="btn btn-block">登 录</button>
+                </div>
+                <div class="m-unlogin">
+                    <div class="b-unlogin" ng-click="unlogin()">
+                        <span class="u-checkbox" id="un-login"> </span>
+                        <i class="iconfont icn gou" ng-show="unloginflag">&#xe7ad;</i>
+                        <label for="un-login">10天免登录</label>
+                    </div>
+                    <a class="forgetpwdReg">忘记密码?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

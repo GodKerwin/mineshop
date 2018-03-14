@@ -9,9 +9,9 @@
                 </div>
                 <div ng-if="!auth">
                     <span class="f-hkdn f-hkdnact">我的世界欢迎你！</span>
-                    <a class="login">登录</a>
+                    <a class="login" ng-click="moveTo('/login/phone')">登录</a>
                     <span class="sep">|</span>
-                    <a>免费注册</a>
+                    <a ng-click="moveTo('/login/register')">免费注册</a>
                 </div>
             </div>
             <ul id="sitebar-navigation-right">

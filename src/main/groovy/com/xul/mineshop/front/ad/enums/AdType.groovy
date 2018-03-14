@@ -1,5 +1,7 @@
 package com.xul.mineshop.front.ad.enums
 
+import com.fasterxml.jackson.annotation.JsonValue
+
 /**
  * 广告分类
  * Created by lxu on 2018/2/8.
@@ -7,20 +9,29 @@ package com.xul.mineshop.front.ad.enums
 enum AdType {
 
     //轮播图
-    BANNER(0, "BANNER"),
+    BANNER(0),
     //其他
-    OTHER(1, "OTHER")
+    OTHER(1)
 
     int value
-    String name
 
-    AdType(int value, String name) {
+    AdType(int value) {
         this.value = value
-        this.name = name
+    }
+
+    @JsonValue
+    int getValue() {
+        return value
+    }
+
+    void setValue(int value) {
+        this.value = value
     }
 
     @Override
     String toString() {
-        return this.name + "[" + this.value + "]"
+        return "AdType{" +
+                "value=" + value +
+                '}'
     }
 }
