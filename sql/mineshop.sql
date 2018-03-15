@@ -9,15 +9,13 @@ use mineshop;
 DROP TABLE IF EXISTS `mine_user`;
 
 CREATE TABLE `mine_user` (
-  `user_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户id',
+  `user_id` char(32) NOT NULL COMMENT '用户id',
   `username` varchar(50) NOT NULL COMMENT '用户名',
   `password` varchar(32) NOT NULL COMMENT '密码，加密存储',
-  `phone` varchar(20) DEFAULT NULL COMMENT '注册手机号',
-  `email` varchar(50) DEFAULT NULL COMMENT '注册邮箱',
+  `phone` varchar(20) DEFAULT NULL COMMENT '手机号',
+  `email` varchar(50) DEFAULT NULL COMMENT '邮箱',
   `crt_time` int(10) NOT NULL DEFAULT 0 COMMENT '创建时间',
   `mod_time` int(10) NOT NULL DEFAULT 0 COMMENT '最后一次修改时间',
-  `mail_code`  varchar(64) NOT NULL DEFAULT '' COMMENT '邮箱激活码' ,
-  `phone_code`  varchar(6) NOT NULL DEFAULT '' COMMENT '短信激活码' ,
   `act_status`  tinyint(1) NOT NULL DEFAULT 0 COMMENT '激活状态（0=>待激活，1=>启用）' ,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `username` (`username`) USING BTREE,
@@ -33,7 +31,7 @@ DROP TABLE IF EXISTS `mine_user_receive`;
 
 CREATE TABLE `mine_user_receive` (
   `receive_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '收货id',
-  `user_id` int(20) DEFAULT NULL COMMENT '用户id',
+  `user_id` char(32) DEFAULT NULL COMMENT '用户id',
   `contact` varchar(50) DEFAULT '' COMMENT '收货人姓名',
   `tel` varchar(20) DEFAULT '' COMMENT '收货人电话',
   `receive_province` varchar(255) DEFAULT '' COMMENT '收货地址：省',
@@ -109,6 +107,7 @@ CREATE TABLE `mine_category` (
   `category_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '分类id',
   `category_type` tinyint(1) NOT NULL DEFAULT '0' COMMENT '分类类型（0=>纵向分类，1=>横向分类（快捷入口））',
   `name` varchar(200) DEFAULT NULL COMMENT '名称',
+  `icon` varchar(200) DEFAULT NULL COMMENT '图标',
   `order` int(4) NOT NULL DEFAULT '1' COMMENT '排列序号，表示同级类目的展现次序，如数值相等则按名称次序排列。取值范围:大于零的整数',
   `crt_time` int(10) NOT NULL DEFAULT 0 COMMENT '创建时间',
   `mod_time` int(10) NOT NULL DEFAULT 0 COMMENT '最后一次修改时间',
@@ -120,16 +119,16 @@ CREATE TABLE `mine_category` (
 -- Records of `mine_category`
 -- ----------------------------
 
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('1', '0', '母婴儿童', '1001', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('2', '0', '美容彩妆', '1002', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('3', '0', '服饰鞋包', '1003', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('4', '0', '家居个护', '1004', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('5', '0', '营养保健', '1005', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('6', '0', '海外直邮', '1006', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('7', '0', '数码家电', '1007', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('8', '0', '环球美食', '1008', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('9', '0', '运动户外', '1009', '1518081135', '1518081135');
-INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `order`, `crt_time`, `mod_time`) VALUES ('10', '0', '水果生鲜', '1010', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('1', '0', '母婴儿童', '&#xe6ef;', '1001', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('2', '0', '美容彩妆', '&#xe642;', '1002', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('3', '0', '服饰鞋包', '&#xe656;', '1003', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('4', '0', '家居个护', '&#xe62b;', '1004', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('5', '0', '营养保健', '&#xe608;', '1005', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('6', '0', '海外直邮', '&#xe64c;', '1006', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('7', '0', '数码家电', '&#xe64b;', '1007', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('8', '0', '环球美食', '&#xe60c;', '1008', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('9', '0', '运动户外', '&#xe600;', '1009', '1518081135', '1518081135');
+INSERT INTO `mineshop`.`mine_category` (`category_id`, `category_type`, `name`, `icon`, `order`, `crt_time`, `mod_time`) VALUES ('10', '0', '水果生鲜', '&#xe62f;', '1010', '1518081135', '1518081135');
 
 
 -- ----------------------------

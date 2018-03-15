@@ -22,8 +22,7 @@ mybatis:
       default-statement-timeout: 30
 
 mail:
-  url: 172.16.23.33:8081
+  url: 172.16.23.33:8081/mineshop/
   username: MineWorldServer@163.com
   password: cptbtptp123
-  content: Click here to activate your account
-  subject: 来自我的世界海购网站的激活邮件
+  subject: 来自我的世界海购的验证邮件

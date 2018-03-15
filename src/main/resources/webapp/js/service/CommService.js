@@ -15,7 +15,8 @@ CommService.service('HttpProvider', function ($http, $q, mine) {
             if (result.data.code === 0) {
                 _data.resolve(result.data.data)
             } else {
-                mine.alert(result.data.message)
+                console.log(result.data.message)
+                mine.alert('服务繁忙')
             }
         }).catch(function (result) {
             console.error(result)

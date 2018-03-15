@@ -10,16 +10,10 @@ class BasicInputBean implements Serializable{
      */
     String user_id
 
-    /**
-     * 用户角色ID
-     */
-    String user_role
-
     @Override
     String toString() {
         return "BasicInputBean{" +
                 "user_id='" + user_id + '\'' +
-                ", user_role='" + user_role + '\'' +
                 '}'
     }
 }

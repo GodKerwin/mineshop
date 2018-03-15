@@ -10,6 +10,7 @@ enum ExceptionEnum {
     SUCCESS(0, "成功"),
     DATA_ERROR(1, "数据操作异常"),
     SYSTEM_BUSY(2, "服务繁忙"),
+    INPUT_EMPTY(3, "入参为空"),
 
     //系统功能异常
     MAIL_EXCEPTION(100, "激活邮件发送失败"),
@@ -17,10 +18,8 @@ enum ExceptionEnum {
     //用户业务异常
     USER_EXIST(200, "用户名已被占用"),
     LOGIN_ERROR(201, "用户名或密码错误"),
-    ACCOUNT_INACTIVE(202, "账户邮箱未激活"),
-    ACTIVECODE_NOT_EXIST(203, "激活码不存在"),
-    ACCOUNT_ACTIVATION(204, "用户已激活"),
-
+    MAILLOGIN_ERROR(202, "邮箱或密码错误"),
+    CHECKCODE_ERROR(203, "验证码错误"),
     ;
 
     /**

@@ -9,7 +9,7 @@ import com.xul.mineshop.front.ad.enums.AdType
 import com.xul.mineshop.front.ad.service.AdService
 import groovy.util.logging.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 /**
@@ -25,16 +25,10 @@ class AdController {
     /**
      * 获取首页轮播图
      */
-    @PostMapping("/front/ad/queryIndexAds")
+    @GetMapping("/front/ad/queryIndexAds")
     BasicOutputBean queryIndexAds(){
         log.info "-----------------getIndexAds Begin-----------------"
-        List<IndexAdInfo> list = null
-        try{
-            list = adService.queryIndexAdByType(AdType.BANNER, 0, 8)
-        }catch (Exception e){
-            log.error(e.toString())
-            throw new MineSystemException(ExceptionEnum.SYSTEM_BUSY)
-        }
+        List<IndexAdInfo> list = adService.queryIndexAdByType(AdType.BANNER, 0, 8)
         log.info "------------------getIndexAds End------------------"
         return BasicOutputBeanUtil.success(list)
     }

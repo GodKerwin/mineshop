@@ -24,6 +24,11 @@ class CategoryInfo implements Serializable {
     String name
 
     /**
+     * 图标
+     */
+    String icon
+
+    /**
      * 排列序号，表示同级类目的展现次序，如数值相等则按名称次序排列。取值范围:大于零的整数
      */
     Integer order
@@ -48,12 +53,14 @@ class CategoryInfo implements Serializable {
      */
     List<CategoryImageInfo> image_list
 
+
     @Override
     String toString() {
         return "CategoryInfo{" +
                 "category_id=" + category_id +
                 ", category_type=" + category_type +
                 ", name='" + name + '\'' +
+                ", icon='" + icon + '\'' +
                 ", order=" + order +
                 ", crt_time=" + crt_time +
                 ", mod_time=" + mod_time +

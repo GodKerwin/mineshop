@@ -12,7 +12,7 @@
                 </div>
                 <ul class="catitmlst">
                     <li ng-repeat="category in categorys">
-                        <i class="iconfont icon">&#xe6ef;</i>
+                        <i class="iconfont icon" ng-bind-html="category.icon"></i>
                         <span>{{category.name}}</span>
                         <i class="iconfont arr">&#xe66b;</i>
                         <em class="vcenter"></em>

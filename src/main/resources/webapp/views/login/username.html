@@ -3,18 +3,21 @@
         <form name="login" ng-submit="login()" novalidate>
             <div class="m-container">
                 <div class="u-tab clearfix">
-                    <a class="tab1"><i class="iconfont icn" style="font-size: 12px">&#xe643;</i><span> 使用短信验证登录</span></a>
+                    <a class="tab1">
+                        <i class="iconfont icn" style="font-size: 12px">&#xe643;</i>
+                        <span> 使用短信验证登录</span>
+                    </a>
                 </div>
                 <div class="inputbox">
                     <div class="u-input">
-                        <i class="iconfont icn">&#xe65f;</i>
-                        <input id="phone" placeholder="请输入手机号" name="phone" type="tel">
+                        <i class="iconfont icn">&#xe677;</i>
+                        <input name="username" ng-model="username" placeholder="请输入用户名" required>
                     </div>
                 </div>
                 <div class="inputbox">
                     <div class="u-input">
                         <i class="iconfont icn">&#xe654;</i>
-                        <input id="password" placeholder="请输入密码" name="password" type="password">
+                        <input name="password" ng-model="password" placeholder="请输入密码" type="password" required>
                     </div>
                 </div>
                 <div class="f-cb loginbox">

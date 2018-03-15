@@ -10,10 +10,9 @@ import org.springframework.context.annotation.Configuration
 @ConfigurationProperties(prefix = "mail")
 class MailProperties {
 
-    String url = "172.16.23.33:8080"
-    String username = "MineWorldServer@163.com"
-    String password = "cptbtptp123"
-    String content = "Click here to activate your account"
-    String subject = "来自徐大大-我的世界网站的激活邮件"
+    String url
+    String username
+    String password
+    String subject
 
 }

@@ -16,16 +16,3 @@ User.controller('loginCtrl',function ($rootScope, $scope, $routeParams) {
         console.log($scope.unloginflag)
     }
 })
-
-User.controller('testCtrl',function ($rootScope, $scope) {
-    $rootScope.show_sitebar = false;
-    $scope.unloginflag = false
-    $scope.unlogin = function () {
-        $scope.unloginflag = !$scope.unloginflag
-        console.log($scope.unloginflag)
-    }
-    // $scope.loginshow = $routeParams.tab;
-    // $scope.changeLoginTab = function (tab) {
-    //     $scope.loginshow = tab
-    // }
-})

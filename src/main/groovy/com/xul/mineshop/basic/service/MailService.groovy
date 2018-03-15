@@ -19,6 +19,24 @@ class MailService {
     @Autowired
     private MailProperties mailProperties
 
+    //发送激活邮件
+    void sendMail(String email, String code) throws Exception {
+        try {
+            Message msg = new MimeMessage(getSession())
+            msg.setFrom(new InternetAddress(mailProperties.username))
+            msg.setRecipient(RecipientType.TO, new InternetAddress(email))
+            msg.setSubject(mailProperties.subject)
+            msg.setContent("<div style='text-align: center'><h3>您正在注册<a href='http://" + mailProperties.url + "#/index/'>我的世界海购</a></h3>" +
+                    "<h3>请验证账户，完成注册步骤。" +
+                    "<h3>您的验证码为:</h3><div>" + code + "</div></div>", "text/html;charset=UTF-8")
+            msg.setSentDate(new Date())
+            Transport.send(msg)
+        } catch (Exception e) {
+            log.error(e.toString())
+            throw new MineSystemException(ExceptionEnum.MAIL_EXCEPTION)
+        }
+    }
+
     //获取Session
     private Session getSession() {
         Properties prop = new Properties()
@@ -33,21 +51,5 @@ class MailService {
         })
         session.setDebug(true)
         return session
-    }
-
-    //发送激活邮件
-    void sendMail(String email, String code) throws Exception {
-        try {
-            Message msg = new MimeMessage(getSession())
-            msg.setFrom(new InternetAddress(mailProperties.username))
-            msg.setRecipient(RecipientType.TO, new InternetAddress(email))
-            msg.setSubject(mailProperties.subject)
-            msg.setContent("<h1>" + mailProperties.content + "：</h1><h3><a href='http://" + mailProperties.url + "/#/active/" + code + "'>http://" + mailProperties.url + "/#/active/" + code + "</a></h3>", "text/html;charset=UTF-8")
-            msg.setSentDate(new Date())
-            Transport.send(msg)
-        } catch (Exception e) {
-            log.error(e.toString())
-            throw new MineSystemException(ExceptionEnum.MAIL_EXCEPTION)
-        }
     }
 }

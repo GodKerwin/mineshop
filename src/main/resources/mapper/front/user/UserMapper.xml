@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+       Copyright 2015-2016 the original author or authors.
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xul.mineshop.front.user.dao.UserMapper">
+
+    <resultMap id="User" type="com.xul.mineshop.front.user.domain.UserInfo">
+        <result column="user_id" property="user_id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="phone" property="phone"/>
+        <result column="email" property="email"/>
+        <result column="crt_time" property="crt_time"/>
+        <result column="mod_time" property="mod_time"/>
+        <result column="act_status" property="act_status" javaType="com.xul.mineshop.front.user.enums.ActiveStatus" typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
+    </resultMap>
+
+    <sql id="key">
+        <trim suffixOverrides=",">
+            <if test="user.user_id!=null">
+                user_id,
+            </if>
+            <if test="user.username!=null">
+                username,
+            </if>
+            <if test="user.password!=null">
+                password,
+            </if>
+            <if test="user.phone!=null">
+                phone,
+            </if>
+            <if test="user.email!=null">
+                email,
+            </if>
+            <if test="user.crt_time!=null">
+                crt_time,
+            </if>
+            <if test="user.mod_time!=null">
+                mod_time,
+            </if>
+            <if test="user.act_status!=null">
+                act_status,
+            </if>
+        </trim>
+    </sql>
+
+    <sql id="value">
+        <trim suffixOverrides=",">
+            <if test="user.user_id!=null">
+                #{user.user_id},
+            </if>
+            <if test="user.username!=null">
+                #{user.username},
+            </if>
+            <if test="user.password!=null">
+                #{user.password},
+            </if>
+            <if test="user.phone!=null">
+                #{user.phone},
+            </if>
+            <if test="user.email!=null">
+                #{user.email},
+            </if>
+            <if test="user.crt_time!=null">
+                #{user.crt_time},
+            </if>
+            <if test="user.mod_time!=null">
+                #{user.mod_time},
+            </if>
+            <if test="user.act_status!=null">
+                #{user.act_status.value},
+            </if>
+        </trim>
+    </sql>
+
+    <insert id="userRegister" parameterType="com.xul.mineshop.front.user.domain.UserInfo">
+        INSERT INTO mine_user (<include refid="key"/>) values (<include refid="value"/>)
+    </insert>
+
+    <select id="checkUsernameExist" resultType="java.lang.Integer">
+        SELECT count(*) FROM mine_user WHERE username = #{username}
+    </select>
+
+    <select id="checkEmailExist" resultType="java.lang.Integer">
+        SELECT count(*) FROM mine_user WHERE email = #{email}
+    </select>
+
+    <select id="getUserByUsername" resultMap="User">
+        SELECT * FROM mine_user WHERE username = #{username}
+    </select>
+
+    <select id="getUserByEmail" resultMap="User">
+        SELECT * FROM mine_user WHERE email = #{email}
+    </select>
+
+</mapper>

@@ -20,6 +20,7 @@
         <result column="category_id" property="category_id"/>
         <result column="category_type" property="category_type" javaType="com.xul.mineshop.front.category.enums.CategoryType" typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
         <result column="name" property="name"/>
+        <result column="icon" property="icon"/>
         <result column="order" property="order"/>
         <result column="crt_time" property="crt_time"/>
         <result column="mod_time" property="mod_time"/>

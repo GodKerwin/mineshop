@@ -28,11 +28,11 @@ body {
 
 @font-face {
     font-family: 'iconfont';  /* project id 542854 */
-    src: url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.eot');
-    src: url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.woff') format('woff'),
-    url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_542854_fyo236crgdzyf1or.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_542854_mj4sql7jdoomkj4i.eot');
+    src: url('//at.alicdn.com/t/font_542854_mj4sql7jdoomkj4i.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_542854_mj4sql7jdoomkj4i.woff') format('woff'),
+    url('//at.alicdn.com/t/font_542854_mj4sql7jdoomkj4i.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_542854_mj4sql7jdoomkj4i.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -1463,13 +1463,13 @@ body {
 }
 
 #loginbox3 {
-    height: 356px;
+    height: 310px;
     width: 420px;
 }
 
 /*-------------手机登录-------------*/
 
-#login_tab {
+.login_tab {
     background-color: transparent;
     border-radius: 0;
     width: 350px;
@@ -1477,12 +1477,12 @@ body {
     position: relative;
 }
 
-#login_tab i {
+.login_tab i {
     color: #999;
     cursor: default;
 }
 
-#login_tab .m-cnt {
+.login_tab .m-cnt {
     background-color: #fff;
     padding: 20px 40px 15px;
     width: 270px;
@@ -1490,7 +1490,7 @@ body {
     box-sizing: content-box;
 }
 
-#login_tab .u-tab {
+.login_tab .u-tab {
     padding: 0 0 10px;
     width: 270px;
     margin: 0 auto;
@@ -1509,7 +1509,7 @@ body {
     color: #e31436 !important;
 }
 
-#login_tab .m-cnt .loginbox {
+.login_tab .m-cnt .loginbox {
     background: #fff none repeat scroll 0 0;
     border-color: #d5d5d5;
     border-radius: 2px;
@@ -1522,21 +1522,21 @@ body {
     padding-top: 10px;
 }
 
-#login_tab .m-cnt .u-input {
+.login_tab .m-cnt .u-input {
     height: 36px;
     margin: 2px 0 18px;
     position: relative;
     border: 1px solid #ccc;
 }
 
-#login_tab .m-cnt .u-input i {
+.login_tab .m-cnt .u-input i {
     position: absolute;
     font-size: 19px;
     left: 12px;
     top: 4px;
 }
 
-#login_tab .u-input input {
+.login_tab .u-input input {
     font-size: 14px;
     font-weight: normal;
     height: 33px;
@@ -1548,17 +1548,17 @@ body {
     color: #333;
 }
 
-#login_tab .loginbox button {
+.login_tab .loginbox button {
     background-color: #e31436;
     color: #fff;
     outline: 0 none;
 }
 
-#login_tab .loginbox button:hover {
+.login_tab .loginbox button:hover {
     background-color: #f5345e;
 }
 
-#login_tab .m-unlogin {
+.login_tab .m-unlogin {
     padding: 20px 0 15px;
     font-size: 0;
     height: 16px;
@@ -1566,11 +1566,11 @@ body {
     cursor: pointer;
 }
 
-#login_tab .m-unlogin :hover {
+.login_tab .m-unlogin :hover {
     color: #e31436
 }
 
-#login_tab .m-unlogin .b-unlogin {
+.login_tab .m-unlogin .b-unlogin {
     border-right: medium none;
     display: block;
     float: left;
@@ -1579,7 +1579,7 @@ body {
     position: relative;
 }
 
-#login_tab .m-unlogin .b-unlogin .u-checkbox {
+.login_tab .m-unlogin .b-unlogin .u-checkbox {
     border: 1px solid #aaa;
     color: #999;
     cursor: pointer;
@@ -1589,7 +1589,7 @@ body {
     width: 14px;
 }
 
-#login_tab .m-unlogin .b-unlogin .gou {
+.login_tab .m-unlogin .b-unlogin .gou {
     color: #449d44;
     font-size: 12px;
     left: 0;
@@ -1598,7 +1598,7 @@ body {
     cursor: pointer;
 }
 
-#login_tab .m-unlogin .b-unlogin label {
+.login_tab .m-unlogin .b-unlogin label {
     color: #999;
     display: block;
     float: left;
@@ -1608,12 +1608,12 @@ body {
     padding-left: 8px;
 }
 
-#login_tab .m-unlogin .b-unlogin label:hover {
+.login_tab .m-unlogin .b-unlogin label:hover {
     color: #e31436;
     cursor: pointer;
 }
 
-.m-cnt .m-unlogin .forgetpwdReg {
+.login_tab .m-cnt .m-unlogin .forgetpwdReg {
     color: #999;
     cursor: pointer;
     float: right;
@@ -1624,3 +1624,50 @@ body {
 }
 
 /*--------------------------------------------注册页------------------------------------------------*/
+
+.login_tab .m-pccnt {
+    position: relative;
+}
+
+.login_tab .m-cnt .m-pcbox {
+    position: relative;
+    font-size: 0;
+}
+
+.login_tab .m-cnt .pcin {
+    padding-left: 8px;
+    width: 130px;
+    position: absolute;
+    left: 0;
+}
+
+.login_tab .m-cnt .pcbtn {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    z-index: 200;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    float: left;
+}
+
+.login_tab .m-cnt .pcbtn button {
+    background-color: #eee;
+    border-left: 1px solid #d5d5d5;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    color: #333;
+    height: 34px;
+    width: 96px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 0;
+    outline: medium none;
+}
+
+.login_tab .m-cnt .pcbtn button:hover {
+    color: #e31436;
+    background-color: #f6f6f6;
+}

@@ -3,9 +3,11 @@ var App = angular.module("myApp", [
     'Route',
     'ui.bootstrap',
     'ngCookies',
+    'ngSanitize',
     'CommService',
     'ModalService',
     'ModalCtrl',
+    'MineDirective',
     'UserCtrl'
 ]);
 
@@ -35,7 +37,7 @@ App.controller('homeCtrl', function ($rootScope, $scope, $location, $timeout, Ht
     };
     var queryIndexAds = function () {
         var Params = {
-            method: 'post',
+            method: 'get',
             url: 'front/ad/queryIndexAds',
             data: {}
         };
@@ -51,7 +53,7 @@ App.controller('homeCtrl', function ($rootScope, $scope, $location, $timeout, Ht
     };
     var queryCategorys = function () {
         var Params = {
-            method: 'post',
+            method: 'get',
             url: 'front/category/queryCategorys',
             data: {}
         };

@@ -13,9 +13,6 @@ Route.config(['$routeProvider',
         }).when('/login/:tab', {
             templateUrl: 'views/login/login.html',
             controller: "loginCtrl"
-        }).when('/test', {
-            templateUrl: 'views/login/phone.html',
-            controller: "testCtrl"
         }).otherwise({
             redirectTo: "/index"
         })
